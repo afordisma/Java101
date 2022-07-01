@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class passgrade {
+    public static void main(String[] args) {
+
+        int mat, fiz, turk, kim, muz;
+        double total;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("********  0 ile 100 arasinda gecerli notlar giriniz. " +
+                "Uygunsuz girdiginiz notlar 0 olarak degerlendirilecektir   *******");
+        System.out.print("Matematik notunuzu giriniz: ");
+        mat = sc.nextInt();
+        if((mat>0)&&(mat<=100)){
+        }else{
+            mat=0;
+        }
+
+        System.out.print("Fizik notunuzu giriniz: ");
+        fiz = sc.nextInt();
+        if((fiz>0)&&(fiz<=100)){
+        }else{
+            fiz=0;
+        }
+
+        System.out.print("Turkce notunuzu giriniz: ");
+        turk = sc.nextInt();
+        if((turk>0)&&(mat<=turk)){
+        }else{
+            turk=0;
+        }
+
+        System.out.print("Kimya notunuzu giriniz: ");
+        kim = sc.nextInt();
+        if((kim>0)&&(kim<=100)){
+        }else{
+            kim=0;
+        }
+
+        System.out.print("Muzik notunuzu giriniz: ");
+        muz = sc.nextInt();
+        if((muz>0)&&(muz<=100)){
+        }else{
+            muz=0;
+        }
+
+    total = (mat+fiz+turk+kim+muz)/5;
+        if(total>=55){
+            System.out.println("Tebrikler! Sinifi basari ile tamamladiniz. Gecme notunuz: "+total);
+        }else{
+            System.out.println("Uzgunuz. Sinifi tamamlayamadiniz. Gecme notunuz: "+total);
+        }
+    }
+}
+
