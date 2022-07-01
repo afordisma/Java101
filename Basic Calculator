@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class basiccalculator {
+    public static void main(String[]args){
+
+        int n1,n2,select;
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Ilk sayiyi giriniz: ");
+        n1 = in.nextInt();
+
+        System.out.print("Ikinci sayiyi giriniz:");
+        n2 = in.nextInt();
+
+        System.out.println("Yapmak istediginiz matematiksel islemi seciniz.");
+        System.out.println("1.Toplama\n2.Cikarma\n3.Carpma\n4.Bolme");
+
+        select = in.nextInt();
+
+        switch(select){
+            case 1:
+                System.out.print("Sonuc="+(n1+n2));
+                break;
+            case 2:
+                System.out.print("Sonuc:"+(n1-n2));
+                break;
+            case 3:
+                System.out.print("Sonuc:"+(n1*n2));
+                break;
+            case 4:
+                if (n2!=0) {
+                    System.out.print("Sonuc:" + (n1 / n2));
+                }else{
+                System.out.print("Belirsizlik");
+                }
+                break;
+
+            default:
+                System.out.print("Tanımlanmayan işlem seçtiniz.");
+
+        }
+    }
+}
