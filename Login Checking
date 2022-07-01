@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class login {
+    public static void main(String[]args){
+
+        Scanner input = new Scanner(System.in);
+
+        String userName, passWord,choice,newPassword;
+
+        System.out.print("Kullanici adinizi giriniz: ");
+        userName = input.nextLine();
+
+        System.out.print("Sifrenizi giriniz:");
+        passWord = input.nextLine();
+
+        if((userName.equals("afordisma"))&&(passWord.equals("123456"))){
+            System.out.println("Oturum acma basarili!");
+        }else{
+            System.out.println("Oturum acma islemi basarisiz. Sifrenizi mi unuttunuz?\n Y/N? ");
+            choice= input.nextLine();
+                if(choice.equals("Y")){
+                    System.out.print("Yeni sifrenizi giriniz:");
+                   newPassword = input.nextLine();
+                   if(newPassword.equals("123456")){
+                       System.out.println("Sifre olusturma basarisiz.");
+                }else{
+                       System.out.println("Yeni sifre olusturuldu.");
+                       passWord=newPassword;
+                   }
+            }else{
+                    System.out.println("Tekrar giris yapmak icin sayfayi yenileyiniz.");
+                }
+        }
+    }
+}
