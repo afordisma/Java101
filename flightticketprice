@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class flightticketprice {
+    public static void main(String[]args){
+
+        Scanner sc = new Scanner(System.in);
+
+        float perKm = (float) 0.1,ageDisc,travelDisc;
+        int age,distance,tripType;
+        double total;
+
+        System.out.println("Hello, please enter the necessary information to benefit from suitable flight tickets and discounts.");
+
+        System.out.print("Age : ");
+        age = sc.nextInt();
+
+        System.out.print("1.One Direction\n2.Round-Trip\nSelect the type of trip:");
+        tripType=sc.nextInt();
+
+        System.out.print("Specify the flight distance in km: ");
+        distance = sc.nextInt();
+
+        if((distance>0)&&(age>0)){
+            if((tripType>0)&&(tripType<3)){
+                total = perKm*distance;
+                if(age<12){
+                    total = total/2;
+                    if(tripType==2){
+                        total=(0.8*total);
+                        System.out.println("Total amount after applicable discounts: "+total);
+                    }else{
+                        System.out.println("Total amount after applicable discounts: "+total);
+                    }
+                }else if (age>65){
+                    total = (0.7*total);
+                    if(tripType==2){
+                        total=(0.8*total);
+                        System.out.println("Total amount after applicable discounts: "+total);
+                    }else{
+                        System.out.println("Total amount after applicable discounts: "+total);
+                    }
+                }else{
+                    total = (0.9*total);
+                    if(tripType==2){
+                        total=(0.8*total);
+                        System.out.println("Total amount after applicable discounts: "+total);
+                    }else{
+                        System.out.println("Total amount after applicable discounts: "+total);
+                    }
+                }
+            }else{
+            System.out.println("You entered incorrectly");
+            }
+        }else{
+            System.out.println("You entered incorrectly");
+        }
+    }
+}
