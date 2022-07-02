@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class sorting {
+    public static void main(String[]args){
+
+        int x,y,z;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Bu program birbirinden farki uc sayiyi kucukten buyuge dogru siralamaktadir. ");
+        System.out.print("Ilk tamsayiyi giriniz x: ");
+        x=sc.nextInt();
+        System.out.print("Ikinci tamsayiyi giriniz y: ");
+        y=sc.nextInt();
+        System.out.print("Ucuncu tamsayiyi giriniz z: ");
+        z=sc.nextInt();
+
+        if((x<y)&&(x<z)){
+            if(y<z){
+                System.out.println("Siralama x<y<z seklindedir.");
+            }else{
+                System.out.println("Siralama x<z<y seklindedir.");
+            }
+        }else if((y<x)&&(y<z)){
+           if(x<z){
+               System.out.println("Siralama y<x<z seklindedir.");
+           }else{
+               System.out.println("Siralama y<z<x seklindedir.");
+           }
+        }else if((z<x)&&(z<y)){
+            if(x<y){
+                System.out.println("Siralama z<x<y seklindedir.");
+            }else{
+                System.out.println("Siralama z<y<x seklindedir.");
+
+            }
+
+        }else{
+            System.out.println("Birbirinden farkli uc sayi girmediniz. Err");
+        }
+    }
+}
