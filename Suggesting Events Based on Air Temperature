@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class weather {
+    public static void main(String[]args){
+
+        int heat;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("How many degrees celsius is the weather today ? ");
+        heat = input.nextInt();
+
+        if(heat<5){
+            System.out.println("The weather is a bit cold. Very suitable for skiing!");
+        }else if((heat>=5)&&(heat<=25)){
+            if(heat<=15){
+                System.out.println("It's cool to spend time outside. Maybe you should go to the movies.");
+            }
+            if(heat>15){
+                System.out.print("The weather is nice enough to go on a picnic!");
+            }
+        }else{
+            System.out.println("Today's weather is hot. It's time to go to the sea!");
+        }
+
+    }
+}
