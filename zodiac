@@ -11,8 +11,6 @@ public class zodiac {
         a = sc.nextInt();
         b = a%12;
 
-        if((b>=0)&&(b<=11)){
-
             switch (b){
                 case 0:
                     System.out.println("Maymun!");
@@ -51,6 +49,5 @@ public class zodiac {
                     System.out.println("Koyun!");
                     break;
             }
-        }
     }
 }
