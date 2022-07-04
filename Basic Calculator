@@ -3,15 +3,16 @@ import java.util.Scanner;
 public class basiccalculator {
     public static void main(String[]args){
 
-        int n1,n2,select;
+        double n1,n2;
+        int select;
 
         Scanner in = new Scanner(System.in);
 
         System.out.print("Ilk sayiyi giriniz: ");
-        n1 = in.nextInt();
+        n1 = in.nextDouble();
 
         System.out.print("Ikinci sayiyi giriniz:");
-        n2 = in.nextInt();
+        n2 = in.nextDouble();
 
         System.out.println("Yapmak istediginiz matematiksel islemi seciniz.");
         System.out.println("1.Toplama\n2.Cikarma\n3.Carpma\n4.Bolme");
@@ -38,7 +39,6 @@ public class basiccalculator {
 
             default:
                 System.out.print("Tanımlanmayan işlem seçtiniz.");
-
         }
     }
 }
