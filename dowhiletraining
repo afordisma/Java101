@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class dowhile {
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+
+       int girdi,toplam;
+        toplam=0;
+
+        do{
+            System.out.println("Bir sayi giriniz: ");
+            girdi=sc.nextInt();
+
+            if(girdi%4==0){
+                toplam += girdi;
+            }
+        }while(girdi%2==0);
+
+        System.out.println("Cift ve 4'un katlari olan sayilarin toplami: "+toplam);
+    }
+}
