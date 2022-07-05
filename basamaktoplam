@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class sumofdigitsofanumber {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int a,numberCounter=0,total=0;
+
+        System.out.print("Bir sayi giriniz :  ");
+        a = sc.nextInt();
+
+        while (a!=0){
+           total+= a%10;
+           a/=10;
+           ++numberCounter;
+
+        }
+
+        System.out.println("basamaklarin toplami: " + total);
+
+            }
+        }
