@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class harmonic {
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+
+       int n;
+        double result = 0;
+        System.out.print("N sayisini giriniz : ");
+        n= sc.nextInt();
+
+        for(float i=1; i<=n;i++){
+            result+=(1/i);
+        }
+        System.out.println("Toplam: "+result);
+    }
+}
